@@ -10,7 +10,7 @@ program main
     integer(c_int) :: res
     character(:), allocatable, target :: url
 
-    url = "http://www.example.com" // c_null_char
+    allocate (url, source="http://www.example.com" // c_null_char)
 
     handle = curl_easy_init()
 
