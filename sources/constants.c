@@ -1,20 +1,18 @@
 #include <curl/curl.h>
-
 #include <stdio.h>
+
+#define INT_PARAMETER "integer(c_int), parameter :: "
 
 int main(void)
 {
-	printf("integer(c_int) :: curle_url_malformat = %d\n",
-	       CURLE_URL_MALFORMAT);
-
-	printf("integer(c_int) :: curle_ok = %d\n",
-	       CURLE_OK);
-
-	printf("integer(c_int) :: curlopt_url = %d\n",
-	       CURLOPT_URL);
-
-	printf("integer(c_int) :: curlopt_writedata = %d\n",
-	       CURLOPT_WRITEDATA);
+	printf(INT_PARAMETER
+	       "curle_url_malformat = %d\n", CURLE_URL_MALFORMAT);
+	printf(INT_PARAMETER
+	       "curle_ok = %d\n", CURLE_OK);
+	printf(INT_PARAMETER
+	       "curlopt_url = %d\n", CURLOPT_URL);
+	printf(INT_PARAMETER
+	       "curlopt_writedata = %d\n", CURLOPT_WRITEDATA);
 
 	return 0;
 }
